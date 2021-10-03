@@ -1,0 +1,68 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/teamTemplate.xhtml">
+
+    <ui:define name="title">Team - #{teamBean.readTeam.teamName}</ui:define>
+    
+    <ui:define name="urlParams">
+		<f:metadata>
+		    <f:viewParam id="teamId" name="teamId" value="#{teamBean.mapUrlParamTeamId}" />
+		    <f:viewParam id="userId" name="userId" value="#{teamBean.mapUrlParamUserId}" />
+		    <f:viewParam id="view" name="view" value="#{teamBean.mapUrlParamView}" />
+		    <f:viewAction action="#{teamBean.mapValuesFromURL()}" />
+		</f:metadata>
+    </ui:define>
+
+    <ui:define name="content">
+        <div class="dashboard">
+        	<p:outputPanel rendered="#{teamBean.mapUrlParamView == 'detailedInfo'}">
+		    	<div class="ui-g">
+		            <div class="ui-g-12 ui-lg-12">
+		            	<h1> #{teamBean.readTeam.teamName}</h1>
+		            	<a href="task?view=queueTasks&amp;teamId=#{teamBean.readTeam.teamId}">View Queue</a><br/>
+						<a href="task?view=viewTasks&amp;teamId=#{teamBean.readTeam.teamId}">View Tasks</a><br/>
+		                <h:outputText value="#{teamBean.readTeam.detailedDescription}" escape="false"/>
+		        	</div>
+		        	<div class="ui-g-12 ui-lg-12">
+		        		<h:outputText value="Members: #{team.readTeam.listTeamUser.size()}"/>
+		        		<p:dataGrid value="#{teamBean.readTeam.listTeamUser}" var="user" columns="5" >
+		        			<p:panel header="#{user.userName}" footer="#{user.roleName}">
+		        				<p:graphicImage value="#{user.userImage}" style="border: 0 none;border-radius: 50px;"/>
+		        			</p:panel>
+		        		</p:dataGrid>
+		        	</div>
+		        </div>
+	        </p:outputPanel>
+	        
+	        <p:outputPanel rendered="#{teamBean.mapUrlParamView == 'myTeams'}">
+		    	<div class="ui-g">
+		        	<div class="ui-g-12 ui-lg-12">
+		        	<h:form>
+		        		<h1>My Teams</h1>
+		        		<p:dataGrid value="#{teamBean.readSetTeams}" var="team" columns="5" >
+		        		<p:column>
+		        			<p:panel header="#{team.teamName}" footer="Members: #{team.listTeamUser.size()}">
+		        				<h:outputText value="#{team.summary}"/>
+		        				<h:outputText value="#{team.PMyRole}"/>
+		        				<br/>
+								<a href="task?view=queueTasks&amp;teamId=#{team.teamId}">View Queue</a><br/>
+								<a href="task?view=teamTasks&amp;teamId=#{team.teamId}">View Tasks</a><br/>
+								<a href="team?view=detailedInfo&amp;teamId=#{team.teamId}">View Team Details</a><br/>
+								<h:link value = "Create Task" outcome="task?view=createTask&amp;teamId=#{team.teamId}" rendered="#{team.PRoleId == '1'}"/><br/>
+								<h:link value = "Manage Tasks" outcome="task?view=manageTasks&amp;teamId=#{team.teamId}" rendered="#{team.PRoleId == '1'}"/>
+		        			</p:panel>
+		        			</p:column>
+		        		</p:dataGrid>
+		        		</h:form>
+		        	</div>
+		        </div>
+	        </p:outputPanel>
+       </div>
+        
+        <h:outputScript name="js/nanoscroller.js" library="avalon-layout" />
+        <h:outputScript name="js/layout.js" library="avalon-layout" />
+    </ui:define>
+</ui:composition>

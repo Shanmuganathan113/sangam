@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="theme-color" content="#{myPreferences.themeColors[myPreferences.theme]}" />
+            <meta name="google-signin-client_id" content="789068257662-gbapt541jvvodlb3qma473m9tf1ih7o5.apps.googleusercontent.com"/>
+        </f:facet>
+        <title><ui:insert name="title">Member</ui:insert></title>
+        
+        <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)}) (window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create","UA-89688675-1","auto");ga ("send","pageview");setTimeout("ga('send','event','adjusted bounce rate','page visit 60 seconds or more')",60000);</script>
+        <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-9085648290645440",
+		    enable_page_level_ads: true
+		  });
+		</script>
+		<script>
+		    function signOut() {
+		      var auth2 = gapi.auth2.getAuthInstance();
+		      auth2.signOut().then(function () {
+		          console.log('User signed out.');
+		        });
+		    }
+
+		    function onLoad() {
+		      gapi.load('auth2', function() {
+		        gapi.auth2.init();
+		      });
+		    }
+  		</script>
+		
+        <ui:insert name="head"/>
+       <style>
+       .ui-button-icon-only .ui-icon.Fs23 {
+	     font-size: 23px !important;
+	     margin-left: -10px;
+	         width: 23px;
+		}
+		.ui-button-icon-only .ui-icon.fa.Fs23 {
+		     margin-top: -12px !important;
+		}
+		.layout-wrapper .layout-main {
+     		padding: 20px 15px 15px 15px !important; 
+     	}
+     	body .ui-menu .ui-menu-list .ui-menu-child.ui-shadow {
+		    background: white !important;
+		}
+       </style>
+       <link rel="stylesheet" href="/css/myStyles2.css" />
+       <link rel="shortcut icon" href="/img/titleIcon.ico"/>
+       <h:outputScript name="js/nanoscroller.js" library="avalon-layout" />
+       <h:outputScript name="js/layout.js" library="avalon-layout" />
+       <h:outputScript name="js/myjs1.js" library="avalon-layout" />
+       <script src="https://apis.google.com/js/platform.js?onload=onLoad"/>
+    </h:head>
+
+    <h:body>
+        <div class="layout-wrapper">
+        	<ui:include src="./topMenuWithoutLeftPanel.xhtml"/>
+        	<ui:include src="./menuWithoutLeftPanel.xhtml"/>
+            
+            <div class="layout-main">
+                <ui:insert name="content"/>
+            </div>
+            
+            <ui:include src="./footer.xhtml" />
+        </div>
+        
+        <p:ajaxStatus style="width:32px;height:32px;position:fixed;right:7px;bottom:7px">
+           <f:facet name="start">
+               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i>
+           </f:facet>
+
+           <f:facet name="complete">
+               <h:outputText value="" />
+           </f:facet>
+       </p:ajaxStatus>
+
+        <h:outputStylesheet name="css/nanoscroller.css" library="avalon-layout" />
+        <h:outputStylesheet name="css/animate.css" library="avalon-layout" />
+        <h:outputStylesheet name="css/layout-#{myPreferences.layout}.css" library="avalon-layout" />
+        <h:outputStylesheet name="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" />
+    </h:body>
+</html>

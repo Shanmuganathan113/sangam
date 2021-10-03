@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="title">Dashboard</ui:define>
+
+    <ui:define name="content">
+    
+        <div class="dashboard">
+           	<div class="ui-g-12">
+                <p:panel header="My Teams" style="height:100%" rendered="#{userDetailsBean.viewInd == 'MyTeams'}">
+                    <p:dataGrid value="#{userDetailsBean.listMyTeams}" var="pages">
+    	                <a href="/page?pageName=#{pages}"> #{pages}</a>
+                    </p:dataGrid>
+                </p:panel>
+                
+                <p:panel header="My Tasks" style="height:100%" rendered="#{userDetailsBean.viewInd == 'MyTasks'}">
+                    
+                </p:panel>
+                
+                <p:panel header="Home" style="height:100%" rendered="#{userDetailsBean.viewInd == 'HomeMsg'}">
+                   <h:outputText value="#{userDetailsBean.homeMsg}"/>
+                   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOwjU7lK1C4MAOnD59nQ1o7HOrRm_kfxhL3tai4cZxg0iPhg/viewform?usp=sf_link" width="640" height="457" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </p:panel>
+                
+            </div>
+        </div>
+        
+    </ui:define>
+
+</ui:composition>

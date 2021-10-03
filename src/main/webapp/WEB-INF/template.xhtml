@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="theme-color" content="#03A9F4" />
+        </f:facet>
+        <title><ui:insert name="title">Tamil Sangam</ui:insert></title>
+        <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="https://apis.google.com/js/platform.js?onload=onLoad"/>
+        
+        <link rel="stylesheet" href="/css/myStyles2.css" />
+        <link rel="shortcut icon" href="/img/titleIcon.ico"/>
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <script src="https://apis.google.com/js/platform.js?onload=onLoad"/>
+        
+        <style>
+	       .ui-button-icon-only .ui-icon.Fs23 {
+		     font-size: 23px !important;
+		     margin-left: -10px;
+		         width: 23px;
+			}
+			.ui-button-icon-only .ui-icon.fa.Fs23 {
+			     margin-top: -12px !important;
+			}
+       </style>
+      <ui:insert name="head"/>
+    </h:head>
+
+    <h:body>
+        <div class="layout-wrapper #{myPreferences.menuLayout}">
+            <ui:include src="./topbar.xhtml" />
+            <ui:include src="./menu.xhtml" />
+            
+            <div class="layout-main">
+                <ui:insert name="content"/>
+            </div>
+            
+            <ui:include src="./footer.xhtml" />
+        </div>
+        
+        <p:ajaxStatus style="width:32px;height:32px;position:fixed;right:7px;bottom:7px">
+           <f:facet name="start">
+               <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i>
+           </f:facet>
+
+           <f:facet name="complete">
+               <h:outputText value="" />
+           </f:facet>
+       </p:ajaxStatus>
+
+        <h:outputStylesheet name="/css/nanoscroller.css" library="avalon-layout" />
+        <h:outputStylesheet name="/css/layout-blue-v4.css" library="avalon-layout" />
+        <h:outputStylesheet name="/css/animate.css" library="avalon-layout" />
+        <h:outputStylesheet name="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" />
+        
+        <h:outputScript name="js/nanoscroller.js" library="avalon-layout" target="head" />
+        <h:outputScript name="js/layout.js" library="avalon-layout"  target="head"/>
+        
+    </h:body>
+
+</html>

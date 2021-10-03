@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+        </f:facet>
+        <title>Login</title>
+        <script src="https://apis.google.com/js/platform.js"/>
+        <style>
+				.button {
+				      	font: bold 14px Arial;
+					    text-decoration: none;
+					    background-color: #0062cc;
+					    color: white;
+					    padding: 6px 10px 6px 15px;
+					    border-top: 1px solid #CCCCCC;
+					    border-right: 1px solid #333333;
+					    border-bottom: 1px solid #333333;
+					    border-left: 1px solid #CCCCCC;
+					    border-radius: 10px;
+					}
+		</style>
+    </h:head>
+
+    <h:body styleClass="landing-body">
+    <center>
+    <div style="top:30%;">
+    	<h2><h:outputText value="தமிழ் சங்கம்-4" style="color:#0062cc"/></h2>
+    	<h:form>
+           	 <a href="/oauth2/authorize/google" class="button"> 
+           	 	Sign in with Google account
+           	 </a>
+       </h:form>
+       </div>    	  
+    </center>    
+        <h:outputStylesheet name="css/animate.css" library="avalon-layout" />
+        <h:outputStylesheet name="css/layout-blue.css" library="avalon-layout" />
+    </h:body>
+</html>

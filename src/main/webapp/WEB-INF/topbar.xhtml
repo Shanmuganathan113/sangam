@@ -1,0 +1,49 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pu="http://primefaces.org/avalon">
+
+    <div class="topbar">
+        <div class="topbar-left">            
+            <p:graphicImage name="images/logo-sangam.png" library="avalon-layout" styleClass="topbar-logo"/>
+        </div>
+        
+        <div class="topbar-right">
+            <a id="menu-button" href="#">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            
+            <a id="topbar-menu-button" href="#">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul class="topbar-items fadeInDown animated">
+                <li>
+                	<div>
+	                    <a href="/logout">
+	                        <i class="topbar-icon animated swing fa fa-fw fa-sign-out"></i>
+	                    </a>
+                    </div>
+                </li>
+                
+                <li>
+                	<div>
+	                    <a href="/member">
+	                        <i class="topbar-icon animated swing fa fa-home"></i>
+	                    </a>
+                    </div>
+                </li>
+                
+                <li class="search-item">
+                    <div class="topbar-search">
+                        <input type="text" placeholder="Search" />
+                        <i class="fa fa-search" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</ui:composition>

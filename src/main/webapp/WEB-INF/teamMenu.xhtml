@@ -1,0 +1,40 @@
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pu="http://primefaces.org/avalon">
+
+     <h:form id="menuform">
+        <div class="layout-menu-container #{myPreferences.menuClass}">
+            <div class="nano">
+                <div class="nano-content menu-scroll-content">
+                    <ui:fragment rendered="#{myPreferences.profileMode == 'inline' and myPreferences.menuLayout != 'menu-layout-static menu-layout-horizontal' and userDetailsBean.user.id != null}">
+                        <div class="profile">
+                            <a id="profile-options" href="#">
+                                <p:graphicImage value="#{userDetailsBean.user.imageUrl}" style="border: 0 none;border-radius: 50px;"/><br/>
+                            	<span class="topbar-item-name">#{userDetailsBean.user.name}</span><br/>
+                            </a>
+                        </div>
+                    </ui:fragment>
+
+                    <pu:menu widgetVar="me">
+                    	<p:menuitem id="om_dashboard1" value="My Teams " url="/team" icon="fa fa-fw fa-arrow-right">
+                    		<f:param name="view" value="myTeams"/>
+	               			<f:param name="userId" value="#{userDetailsBean.user.id}"/>
+                    	</p:menuitem>
+                    	<p:menuitem id="om_dashboard2" value="My Tasks " url="/task" icon="fa fa-fw fa-arrow-right">
+                    		<f:param name="view" value="myTasks"/>
+	               			<f:param name="userId" value="#{userDetailsBean.user.id}"/>
+                    	</p:menuitem>
+                    	
+                    	<p:menuitem id="om_dashboard5" value="Filter Task" url="/task" icon="fa fa-fw fa-arrow-right">
+                    		<f:param name="view" value="filterTask"/>
+                    	</p:menuitem>
+                    </pu:menu>
+                </div>
+            </div>
+        </div>
+    </h:form>
+</ui:composition>

@@ -1,0 +1,105 @@
+spring:
+  profiles:
+    active: "dev"
+    
+---
+
+name: This is development environment running with local resources
+internalService:
+    taskServiceURL: http://localhost:9001/task
+    teamServiceURL: http://localhost:9001/team
+    utilServiceURL: http://localhost:9001/util
+logging:
+    level:
+        root: info
+        web: info
+    pattern:
+        file: '"%d{yyyy-MM-dd HH:mm:ss} - %msg%n"'
+server:
+    port: 9000
+    servlet:
+        context-parameters:
+            primefaces:
+                FONT_AWESOME: true
+                THEME: avalon
+    error:
+        whitelabel:
+            enabled: false  
+        path: /error
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: root
+        url: jdbc:mysql://localhost/sangam_uat
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: none
+        properties:
+            hibernate:
+                format_sql: true
+        show-sql: true
+    mvc:
+        view:
+            suffix: .xhtml
+    security:
+        oauth2:
+            client:
+                registration:
+                    google:
+                        clientId: 789068257662-6bmitgocvknlf7lqntqsrp0s7tg4gro5.apps.googleusercontent.com
+                        clientSecret: JhgnyRWs-bUv5Vyp1N4pnmzp
+                        redirectUri: '{baseUrl}/oauth2/callback/{registrationId}'
+                        scope: profile email
+    profiles: dev
+    
+---    
+
+name: This is production environment running with production resource
+internalService:
+    taskServiceURL: http://localhost:9001/task
+    teamServiceURL: http://localhost:9001/team
+    utilServiceURL: http://localhost:9001/util
+logging:
+    level:
+        root: info
+        web: info
+    pattern:
+        file: '"%d{yyyy-MM-dd HH:mm:ss} - %msg%n"'
+server:
+    port: 9000
+    servlet:
+        context-parameters:
+            primefaces:
+                FONT_AWESOME: true
+                THEME: avalon
+    error:
+        whitelabel:
+            enabled: false  
+        path: /error
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: ****
+        url: *****
+        username: ****
+    jpa:
+        hibernate:
+            ddl-auto: none
+        properties:
+            hibernate:
+                format_sql: true
+        show-sql: true
+    mvc:
+        view:
+            suffix: .xhtml
+    security:
+        oauth2:
+            client:
+                registration:
+                    google:
+                        clientId: 789068257662-6bmitgocvknlf7lqntqsrp0s7tg4gro5.apps.googleusercontent.com
+                        clientSecret: JhgnyRWs-bUv5Vyp1N4pnmzp
+                        redirectUri: '{baseUrl}/oauth2/callback/{registrationId}'
+                        scope: profile email
+    profiles: prod

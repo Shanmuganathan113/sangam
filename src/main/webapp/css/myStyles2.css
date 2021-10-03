@@ -1,0 +1,306 @@
+.secondHeading{
+				font-family: 'Roboto', sans-serif !important;
+					color: #37474F;
+				font-size : 20px;
+				padding: 5px;
+			}
+			
+			.linksList{
+				font-family: 'Roboto', sans-serif !important;
+			    font-size: 15px;
+   				line-height: 1.5;
+			}
+			.roundLinks{
+				font-family: 'Roboto', sans-serif !important;
+				font-size: 14px;
+    			line-height: 1.8;
+			}
+			.questionsAnsContent{
+				font-family: 'Roboto', sans-serif !important;
+				font-size: 15px;
+    			line-height: 1.8;
+    			color: #37474F;
+			}
+			.pagination{
+				    padding: 10px;
+				    border: 1px solid #2d6da3;
+			}
+			.questionsList{
+				font-family: 'Roboto', sans-serif !important;
+			    font-size: 15px;
+   				line-height: 2;
+			}
+			.secondBlueHeading{
+				font-family: 'Roboto', sans-serif !important;
+    			line-height: 1.8;
+				color:#285f8f;
+				font-size: 17px;
+			}
+			.contentWell{
+				    padding: 10px;
+			}
+			.content{
+				font-family: 'Roboto', sans-serif !important;
+				font-size: 15px;
+    			line-height: 1.8;
+    			color: #37474F;
+			}
+			.content .table{
+				font-family: 'Roboto', sans-serif !important;
+				font-size: 15px;
+    			line-height: 1.8;
+    			color: #37474F;
+			}
+			.katex * {
+		    	text-align: center !important;
+			}
+			.answerTheme{
+				color: #37474F;
+			    line-height: 2.5 !important;
+			    padding: 2px !important;
+			    font-size: 25px !important;
+			}
+			body .ui-widget-content{
+				background:none !important;
+				border : #dddddd !important;
+				color: #37474F;
+			}			
+			
+					
+ .alert{padding:8px 35px 8px 14px;margin-bottom:20px;color:#c09853;text-shadow:0 1px 0 rgba(255,255,255,0.5);background-color:#fcf8e3;border:1px solid #fbeed5;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+ .alert h4{margin:0}.alert .close{position:relative;top:-2px;right:-21px;line-height:20px}
+ .alert-success{color:#468847;background-color:#dff0d8;border-color:#d6e9c6}
+ .alert-danger,.alert-error{color:#b94a48;background-color:#f2dede;border-color:#eed3d7}
+ .alert-info{color:#3a87ad;background-color:#d9edf7;border-color:#bce8f1}.alert-block{padding-top:14px;padding-bottom:14px}.alert-block>p,.alert-block>ul{margin-bottom:0}
+ .alert-block p+p{margin-top:5px}
+		
+/*Styles for slides*/
+.outerTemplate {
+  display: flex;
+  flex-flow: column;
+  width:95%;
+  min-height: 100%;
+}
+
+.outerTemplate .row {
+  border: 0px dotted grey;
+}
+
+.outerTemplate .row.header {
+  flex: 0 1 auto;
+  font-style: italic;
+  font-size: 15px;
+  padding-bottom: 2%;  
+}
+
+.outerTemplate .row.content {
+  flex: 1 1 auto;  
+}
+
+.outerTemplatefooter {
+    text-align: center;
+    font-size: 15px !important;
+    display: flex !important;
+    font-style: italic !important;    
+    padding-top: 10px !important;
+}
+
+.highlightEntireEqn{
+    border: 2px solid #c0392b !important;
+    border-radius: 18px ;
+    padding: 10px !important;;
+    background: #e74c3c;
+    color: white;
+    box-shadow: 5px 5px #c3b3b2;
+    line-height: 1.5 !important;
+    }
+frag1{
+    background: #27ae60;
+    color: white;
+    }
+    
+.highlightFragment1{
+	border: 2px solid #16a085 !important;
+    border-radius: 18px;
+    padding: 4px !important;
+    background: white;
+    color: #16a085;
+    box-shadow: 5px 5px #c6e4df;
+    line-height: 2.5 !important;
+    }
+ fragment1frag1{
+    background: #16a085;
+    color: white;
+    padding:12px;
+    border-radius: 10px;
+    line-height: 2.5 !important;
+    }
+    
+ .highlightFragment2{
+	border: 2px solid #2a76dd !important;
+    border-radius: 18px;
+    padding: 4px !important;
+    background: white;
+    color: #2a76dd;
+    box-shadow: 5px 5px #bcd8ff;
+    line-height: 2.5 !important;    
+    }
+ fragment2frag2{
+    background: #2a76dd;
+    color: white;
+    padding:12px;
+    border-radius: 10px;
+    line-height: 2.5 !important;
+    }
+ .highlightFragment3{
+	border: 2px solid #9b59b6 !important;
+    border-radius: 18px;
+    padding: 4px !important;
+    background: white;
+    color: #9b59b6;
+    box-shadow: 5px 5px #dcd4e0;
+    line-height: 2.5 !important;    
+    }
+ fragment3frag3{
+    background: #9b59b6;
+    color: white;
+    padding:12px;
+    border-radius: 10px;
+    line-height: 2.5 !important;
+    }    
+  .ssType1{
+  	color: #2980b9 !important; 
+    width: 95%;
+    box-shadow: 5px 5px #dcd4e0;
+    border: 2px solid #2980b9 !important; 
+    padding: 2% !important; 
+    border-radius: 18px;
+  }
+   ssHighlightType1{
+	background : #2980b9 !important;
+  	color: white !important; 
+    padding:2px !important; 
+    border-radius: 10px;
+  }
+  
+  .ssType2{
+  	color: #8e44ad;
+    width: 95%;
+    height: 100%;
+    box-shadow: 5px 5px #bfc4ca;
+    border: 2px solid #8e44ad !important;
+    padding: 2% !important;
+    border-radius: 18px;
+  }
+   ssHighlightType2{
+	background : #8e44ad !important;
+  	color: white !important; 
+    padding:2px !important; 
+    border-radius: 10px;
+  }
+  
+  .ssType3{
+	color: #c23616;
+    width: 95%;
+    height: 100%;
+    box-shadow: 5px 5px #eab7b7;
+    border: 2px solid #c23616 !important; 
+    padding: 2% !important; 
+    border-radius: 18px;
+  }
+   ssHighlightType3{
+	background : #c23616 !important;
+  	color: white !important; 
+    padding:2px !important; 
+    border-radius: 10px;
+  }
+  
+  /*************************************/
+  .blueTitleSticker {
+    color: white;
+    background: #1565C0;
+    box-shadow: 8px 8px #bfc4ca;
+    padding: 2% !important;
+    font-size: 25px !important;
+}
+
+ .redTitleSticker {
+ 	color:white;
+    background: #F44336;
+    box-shadow: 8px 8px #bfc4ca;
+    padding: 2% !important;
+    font-size: 25px !important;
+}
+
+.greenTitleSticker{
+ 	color:white;
+    background: #558B2F;
+    box-shadow: 8px 8px #bfc4ca;
+    padding: 2% !important;
+    font-size: 25px !important;
+}
+.tealTitleSticker{
+ 	color:white;
+    background: #00695C;
+    box-shadow: 8px 8px #bfc4ca;
+    padding: 2% !important;
+    font-size: 25px !important;
+}
+
+/** points to remember type 1 **/
+
+.PTR-content{
+	color: #37474F;
+    background: white;
+    padding: 10px !important;
+    font-size: 25px !important;
+}
+
+.themeTitle {
+    font-size: 35px !important;
+    padding: 1px !important;
+	font-family: 'Roboto', sans-serif !important; 
+    /*color: #4CAF50; border-bottom: 1px solid #4CAF50 !important;*/
+}
+.themeContent {
+	color: #37474F;
+	line-height: 1.8 !important;
+    padding: 10px !important;
+    font-size: 25px !important;
+}
+
+themeHighlight{
+	color: #4CAF50;
+}
+
+
+/* -=-=-=-=-=-=-= */
+themeContentHighlight{
+	color: black;
+}
+.themeThickContentHighlight{
+	box-shadow: 5px 5px #c3b3b2;
+  	color: white !important;
+    padding: 10px !important;;
+}
+
+.themeThinContentHighlight{
+  	box-shadow: 5px 5px #c3b3b2;
+  	padding: 10px !important;;
+}
+
+themeTitleTwo{
+	font-size: 28px !important;
+    padding: 1px !important;    
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.linkButton{
+    color: white !important;
+    padding: 10px !important;
+    box-shadow: 5px 5px #dcd4e0 !important;
+    border-radius: 10px;
+}
+.layout-wrapper .topbar {
+    position: absolute !important;
+}

@@ -1,0 +1,177 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.sangam:Sangam:war:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-web:jar -> duplicate declaration of version (?) @ line 79, column 15
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-data-jpa:jar -> duplicate declaration of version (?) @ line 83, column 15
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-test:jar -> duplicate declaration of version (?) @ line 108, column 15
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: mysql:mysql-connector-java:jar -> duplicate declaration of version (?) @ line 159, column 15
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-configuration-processor:jar -> duplicate declaration of version (?) @ line 215, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------------< com.sangam:Sangam >--------------------------
+[INFO] Building Sangam 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ Sangam ---
+[INFO] Deleting D:\Sangam\SangamProject\Sangam\Sangam\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ Sangam ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ Sangam ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 68 source files to D:\Sangam\SangamProject\Sangam\Sangam\target\classes
+[INFO] /D:/Sangam/SangamProject/Sangam/Sangam/src/main/java/com/sangam/sangam/SangamApplication.java: Some input files use unchecked or unsafe operations.
+[INFO] /D:/Sangam/SangamProject/Sangam/Sangam/src/main/java/com/sangam/sangam/SangamApplication.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ Sangam ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\Sangam\SangamProject\Sangam\Sangam\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ Sangam ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to D:\Sangam\SangamProject\Sangam\Sangam\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ Sangam ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.sangam.sangam.SangamApplicationTests
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/User/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/User/.m2/repository/org/slf4j/slf4j-nop/1.7.28/slf4j-nop-1.7.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/User/.m2/repository/org/slf4j/slf4j-jdk14/1.7.28/slf4j-jdk14-1.7.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/User/.m2/repository/org/slf4j/slf4j-log4j12/1.7.28/slf4j-log4j12-1.7.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+14:13:03,802 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+14:13:03,804 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+14:13:03,805 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/D:/Sangam/SangamProject/Sangam/Sangam/target/classes/logback.xml]
+14:13:03,953 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+14:13:03,964 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+14:13:03,973 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE]
+14:13:03,998 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1527953000 - setting totalSizeCap to 3 MB
+14:13:04,018 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1527953000 - Will use gz compression
+14:13:04,020 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1527953000 - Will use the pattern D:/tmp/%d{yyyy/MM}/LogFile-Sangam for the active file
+14:13:04,026 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - The date pattern is 'yyyy/MM' from file name pattern 'D:/tmp/%d{yyyy/MM}/LogFile-Sangam.gz'.
+14:13:04,026 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Rollover at start of every month.
+14:13:04,037 |-INFO in c.q.l.core.rolling.DefaultTimeBasedFileNamingAndTriggeringPolicy - Setting initial period to Mon Jul 26 14:12:40 IST 2021
+14:13:04,038 |-WARN in c.q.l.core.rolling.TimeBasedRollingPolicy@1527953000 - 'maxHistory' is not set, ignoring 'totalSizeCap' option with value [3 MB]
+14:13:04,059 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+14:13:04,059 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+14:13:04,059 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+14:13:04,061 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: D:/tmp/LogFile-Sangam.log
+14:13:04,061 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [D:/tmp/LogFile-Sangam.log]
+14:13:04,062 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+14:13:04,064 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [CONSOLE]
+14:13:04,066 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+14:13:04,066 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+14:13:04,066 |-WARN in ch.qos.logback.core.ConsoleAppender[CONSOLE] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+14:13:04,068 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.sangam] to DEBUG
+14:13:04,068 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.sangam] to false
+14:13:04,068 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[com.sangam]
+14:13:04,069 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[com.sangam]
+14:13:04,069 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to ERROR
+14:13:04,069 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[ROOT]
+14:13:04,069 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE] to Logger[ROOT]
+14:13:04,069 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+14:13:04,070 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@1165b38 - Registering current configuration as safe fallback point
+
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+ _____                    _  _   _____                                            ___ 
+|_   _|                  (_)| | /  ___|                                          /   |
+  | |    __ _  _ __ ___   _ | | \ `--.   __ _  _ __    __ _   __ _  _ __ ___    / /| |
+  | |   / _` || '_ ` _ \ | || |  `--. \ / _` || '_ \  / _` | / _` || '_ ` _ \  / /_| |
+  | |  | (_| || | | | | || || | /\__/ /| (_| || | | || (_| || (_| || | | | | | \___  |
+  \_/   \__,_||_| |_| |_||_||_| \____/  \__,_||_| |_| \__, | \__,_||_| |_| |_|     |_/
+                                                       __/ |                          
+                                                      |___/                           
+14:13:08.196 [main] WARN  o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/User/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/User/.m2/repository/org/json/json/20190722/json-20190722.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+14:13:08.210 [main] INFO  c.s.sangam.SangamApplicationTests - The following profiles are active: prod
+14:13:10.553 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+14:13:10.832 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 256ms. Found 2 repository interfaces.
+14:13:11.566 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=5a6006c2-712c-3cda-829e-b335a79ab27b
+14:13:11.799 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.sangam.sangam.utils.InternalQuestionService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:11.802 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.sangam.sangam.utils.InternalSlideShowQuizService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:11.805 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.sangam.sangam.utils.InternalTaskService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:11.819 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.sangam.sangam.utils.InternalTeamService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:11.831 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.sangam.sangam.utils.InternalUtilService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.118 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b3f87cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.537 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a3ed5007] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.559 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.567 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7ea42c82' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.597 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$c8c1f2b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.651 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration$$EnhancerBySpringCGLIB$$ee170acf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.684 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.694 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:13:12.821 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$27598aca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+14:13:13.785 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:13:13.798 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+14:13:18.844 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:13:19.075 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14:13:19.343 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.12.Final}
+14:13:19.348 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+14:13:19.847 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+14:13:20.578 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+14:13:22.257 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+Entered
+14:13:26.600 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:13:26.853 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:13:27.882 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+14:13:28.222 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f3abe67, org.springframework.security.web.context.SecurityContextPersistenceFilter@42a198dd, org.springframework.security.web.header.HeaderWriterFilter@1722ede1, org.springframework.web.filter.CorsFilter@64f1e9f8, org.springframework.security.web.authentication.logout.LogoutFilter@569026df, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@c50d1b2, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@454f6cc5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@72b60be8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@709c6768, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b3284, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d3929ba, org.springframework.security.web.session.SessionManagementFilter@73f0b216, org.springframework.security.web.access.ExceptionTranslationFilter@6c4c32ff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d224921]
+14:13:28.773 [main] WARN  o.s.c.n.a.ArchaiusAutoConfiguration - No spring.application.name found, defaulting to 'application'
+14:13:28.779 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:13:28.779 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:13:28.787 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:13:28.788 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:13:29.522 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:13:31.748 [main] INFO  c.s.sangam.SangamApplicationTests - Started SangamApplicationTests in 26.929 seconds (JVM running for 28.948)
+Loaded Environment: This is production environment running with production resource
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.759 s - in com.sangam.sangam.SangamApplicationTests
+14:13:32.531 [Thread-4] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:13:32.546 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:13:32.551 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:13:35.181 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.3:war (default-war) @ Sangam ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [Sangam] in [D:\Sangam\SangamProject\Sangam\Sangam\target\Sangam-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [D:\Sangam\SangamProject\Sangam\Sangam\src\main\webapp]
+[INFO] Webapp assembled in [2239 msecs]
+[INFO] Building war: D:\Sangam\SangamProject\Sangam\Sangam\target\Sangam-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.9.RELEASE:repackage (repackage) @ Sangam ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ Sangam ---
+[INFO] Installing D:\Sangam\SangamProject\Sangam\Sangam\target\Sangam-0.0.1-SNAPSHOT.war to C:\Users\User\.m2\repository\com\sangam\Sangam\0.0.1-SNAPSHOT\Sangam-0.0.1-SNAPSHOT.war
+[INFO] Installing D:\Sangam\SangamProject\Sangam\Sangam\pom.xml to C:\Users\User\.m2\repository\com\sangam\Sangam\0.0.1-SNAPSHOT\Sangam-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:03 min
+[INFO] Finished at: 2021-07-26T14:13:48+05:30
+[INFO] ------------------------------------------------------------------------
