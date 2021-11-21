@@ -47,8 +47,8 @@ spring:
             client:
                 registration:
                     google:
-                        clientId: 789068257662-6bmitgocvknlf7lqntqsrp0s7tg4gro5.apps.googleusercontent.com
-                        clientSecret: JhgnyRWs-bUv5Vyp1N4pnmzp
+                        clientId: 75173156128-pplmc9coltuupvug046m5b8ns8o0bej0.apps.googleusercontent.com
+                        clientSecret: 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
                         redirectUri: '{baseUrl}/oauth2/callback/{registrationId}'
                         scope: profile email
     profiles: dev
@@ -80,9 +80,9 @@ server:
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        password: ****
-        url: *****
-        username: ****
+        password:  pwd
+        url: url
+        username: UN
     jpa:
         hibernate:
             ddl-auto: none

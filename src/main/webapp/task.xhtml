@@ -21,47 +21,47 @@
     <ui:define name="content">
         <p:outputPanel rendered="#{taskBean.mapUrlParamView == 'taskDetail'}">
 			<div class="ui-g">
-         		<div class="ui-g-12 ui-lg-8">
+         		<div class="ui-g-12 ui-lg-12">
+         		
+         		<h:outputText value="[#{taskBean.readTaskDTO.taskId}] #{taskBean.readTaskDTO.title} - #{taskBean.readTaskDTO.PLatestLog.taskStatus}" rendered="#{taskBean.readStatusInd == 'task'}" style="font-size:20px;color:#292B2C"/>
+ 				<hr/>
       				<p:tabView id="tv_log">
  						<p:tab title="Task Details">
- 							<h:outputText value="#{taskBean.readTaskDTO.title}" rendered="#{taskBean.readStatusInd == 'task'}"/>
- 							<br/>				
-                			<h:outputText value="#{taskBean.readUpdationStatus}"/>
-                
-                	<h:outputLabel value="Description:" style="font-size:20px;color:#292B2C"/><br/>
-                	<div class="editor_content">
-                		<h:outputText value="#{taskBean.readTaskDTO.description}" escape="false" />
-                	</div>
-	            
-					<h:form id="frm_task_log">
-						<h3>Task Log</h3>
-						<p:editor value="#{taskBean.mapLogDTO.logDescription}" immediate="true"/>
-						<p:selectOneMenu value="#{taskBean.readSelectedItem}"  style="width:100%">
-							<f:selectItem itemValue="" itemLabel="--Select Item --" />
-							<f:selectItems value="#{taskBean.readTaskDTO.listMyPrivilege}"/>
-							<f:ajax listener="#{taskBean.loadSelectedItems}" render="id_teamMembers" />
-							<p:ajax event="itemSelect" process="tv_log:frm_task_log" update="tv_log:frm_task_log"/>
-						</p:selectOneMenu><br/><br/>
-						
-						<!--  if assign, find some user -->
-						<p:outputPanel id="id_subMenu" rendered="#{(taskBean.readSelectedItem == 102) or (taskBean.readSelectedItem == 151)}">
-							<p:selectOneMenu style="width:100%" value="#{taskBean.readIntendedId}" rendered="#{taskBean.readSelectedItem == 102}">
-								<f:selectItems value="#{taskBean.mapTeamMembers}"/>
-							</p:selectOneMenu>
+ 						
+	                	<div class="editor_content">
+	                		<h:outputText value="#{taskBean.readTaskDTO.description}" escape="false" />
+	                	</div>
+		            
+						<h:form id="frm_task_log">
+							<h3>Task Log</h3>
 							
-							<p:selectOneMenu value="#{taskBean.readIntendedId}" style="width:100%" rendered="#{taskBean.readSelectedItem == 151}">
-								<f:selectItems value="#{taskBean.mapListTeam}"/>
-							</p:selectOneMenu>
-							<br/><br/>
-						</p:outputPanel>
+				            <p:editor value="#{taskBean.mapLogDTO.logDescription}" immediate="true" placeholder="Details goes here..." height="200"/>
+							<p:selectOneMenu value="#{taskBean.readSelectedItem}"  style="width:100%">
+								<f:selectItem itemValue="" itemLabel="--Select Item --" />
+								<f:selectItems value="#{taskBean.readTaskDTO.listMyPrivilege}"/>
+								<f:ajax listener="#{taskBean.loadSelectedItems}" render="id_teamMembers" />
+								<p:ajax event="itemSelect" process="tv_log:frm_task_log" update="tv_log:frm_task_log"/>
+							</p:selectOneMenu><br/><br/>
+							
+							<!--  if assign, find some user -->
+							<p:outputPanel id="id_subMenu" rendered="#{(taskBean.readSelectedItem == 102) or (taskBean.readSelectedItem == 151)}">
+								<p:selectOneMenu style="width:100%" value="#{taskBean.readIntendedId}" rendered="#{taskBean.readSelectedItem == 102}">
+									<f:selectItems value="#{taskBean.mapTeamMembers}"/>
+								</p:selectOneMenu>
+								
+								<p:selectOneMenu value="#{taskBean.readIntendedId}" style="width:100%" rendered="#{taskBean.readSelectedItem == 151}">
+									<f:selectItems value="#{taskBean.mapListTeam}"/>
+								</p:selectOneMenu>
+								<br/><br/>
+							</p:outputPanel>
+							
+							<p:commandButton value="Save" action="#{taskBean.saveLog()}" update="tv_log" style="width:100%"/>
+							<h:outputText value="#{taskBean.readViewStatusMessage.statusMessage}" rendered="#{taskBean.readViewStatusMessage.statusMessage != null}"/>
+							<p:growl  showDetail="true"/>
+						</h:form>
+						</p:tab>
 						
-						<p:commandButton value="Save" action="#{taskBean.saveLog()}" update="tv_log" style="width:100%"/>
-						<h:outputText value="#{taskBean.readViewStatusMessage.statusMessage}" rendered="#{taskBean.readViewStatusMessage.statusMessage != null}"/>
-						<p:growl  showDetail="true"/>
-					</h:form>
-					</p:tab>
-						
-						<p:tab title="Task History">
+						<p:tab title="Task Log">
 	                	<p:dataGrid value="#{taskBean.readTaskDTO.log}" var="log" columns="1" styleClass="messages">
 	                	<div class="ui-g">
                 		  		<div class="ui-g-1">
@@ -87,23 +87,7 @@
 	                	</p:tab>
 	                </p:tabView>
                </div>
-			                
-	                <div class="ui-g-12 ui-lg-3">
-		                <h:outputText value="Task ID " style="font-size:18px;color:#292B2C"/><br/>
-	                	<h:outputText value="#{taskBean.readTaskDTO.taskId}" style="font-size:16px;color:#292B2C"/>
-	                	<br/><br/>
-	                	<h:outputText value="Created By : "  style="font-size:20px;color:#292B2C"/><br/>
-	                	<h:outputText value="#{taskBean.readTaskDTO.PCreatedByTeam.userName}" style="font-size:18px;color:#292B2C"/>
-	                	<br/><br/>
-	                	<h:outputText value="Current Status : " style="font-size:20px;color:#292B2C"/><br/>
-	                	<h:outputText value="#{taskBean.readTaskDTO.PLatestLog.taskStatus}" style="font-size:18px;color:#292B2C"/>
-	                	
-	                	<br/><br/>
-	                	
-	                	<br/><br/>
-	                	<h:outputText value="My teams : " style="font-size:20px;color:#292B2C"/><br/>
-                	</div>
-                </div>
+               </div>
         	</p:outputPanel>
         	
         	<!--  Shows tasks list of various requirements -->
@@ -239,14 +223,12 @@
         		<h:form id="frm_manageTasks">
 	        		<h2>Task Util</h2>
                		<p:outputLabel value="Paste your json content below..."/><br/><br/>
-               		<p:inputTextarea id="it" value="#{taskBean.mapTaskUtils}" required="true" rows="15" requiredMessage="Content is required" style="width:80%"/><br/>
+               		<p:inputTextarea id="it" value="#{taskBean.mapTaskUtils}" required="true" rows="15" requiredMessage="Content is required" style="width:100%"/><br/>
                		<br/>
-                	<p:commandButton value="Submit" action="#{taskBean.manageTasks}" update=":frm_manageTasks"/><br/>
+                	<p:commandButton value="Submit" action="#{taskBean.manageTasks}" update=":frm_manageTasks" style="width:100%"/><br/>
                 	<p:messages/>
                	</h:form>
         	</p:outputPanel>
-        	
-        	
         	
         <h:outputScript name="js/nanoscroller.js" library="avalon-layout" />
         <h:outputScript name="js/layout.js" library="avalon-layout" />
