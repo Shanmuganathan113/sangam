@@ -47,8 +47,8 @@ public class UserDetailsBean {
     @PostConstruct
     public void getUserDetails() {
     	Optional<User> userOptional = null;
+    	this.getCurrentUser();
     	userOptional = userRepository.findByEmail(user.getEmail());
-    	
 	    if( userOptional.isPresent()) {
 	    	this.user = userOptional.get();
 	    }

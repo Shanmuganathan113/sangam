@@ -32,10 +32,6 @@ public class MessageBean {
 	MessageDTO messageDTO = new MessageDTO();
 	
 	public void sendMessage() {
-//		messageDTO.setId(null);
-//		this.loadUserDetails();
-//		messageDTO.setSentBy(this.myUserId);
-		
 		this.statusMessage = messageService.sendMessage(messageDTO);
 	}
 
@@ -49,8 +45,6 @@ public class MessageBean {
 		else {
 		    this.myUserId = null;
 		}
-		System.out.println("User id in messages bean >> "+this.myUserId);
-	    
 	}
 	
 }

@@ -165,6 +165,7 @@ public class TaskBean {
 	
 	public Map<String,String> loadParams(String flag) throws Exception{
 		Map<String,String> mapParams = new HashMap<String,String>();
+			mapParams.put(Constants.STATIC_TASK_PARAM_USER_ID, this.myUserId);
 		if(this.mapUrlParamTaskId != null)
 			mapParams.put(Constants.STATIC_TASK_PARAM_ID, this.mapUrlParamTaskId.toString());
 		if(this.mapUrlParamUserId != null)
@@ -204,9 +205,9 @@ public class TaskBean {
 	}
 	
 	public void loadSelectedItems() throws Exception{
-		if(this.readSelectedItem == Constants.IND_LOAD_TEAM_LIST)
+		if(this.readSelectedItem.intValue() == Constants.IND_LOAD_TEAM_LIST.intValue())
 			this.loadTeamsList();
-		if(this.readSelectedItem == Constants.IND_LOAD_TEAM_MEMBERS)
+		if(this.readSelectedItem.intValue() == Constants.IND_LOAD_TEAM_MEMBERS.intValue())
 			this.loadTeamMembers(this.readTeamId);
 	}
 	

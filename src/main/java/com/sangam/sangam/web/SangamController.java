@@ -12,15 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class SangamController {
-	
-//	@RequestMapping("/index")
-//	@PreAuthorize("hasRole('USER')")
-//    public String home() {
-//        return "index";
-//    }
-//	
 	@RequestMapping("/team")
-    public String slideShow() {
+    public String team() {
 		return "team";
     }
 	
@@ -35,21 +28,5 @@ public class SangamController {
 	@PreAuthorize("hasRole('USER')") 
     public String member() {
         return "member";
-    }
-	
-	@RequestMapping("/questionsAnswers")
-    public String questionsAnswers() {
-        return "questionsAnswers";
-    }
-	
-	@RequestMapping("/contact-us")
-    public String contribute() {
-        return "contactUs";
-    }
-	
-	@RequestMapping(value = "/username", method = RequestMethod.GET)
-    @ResponseBody
-    public String currentUserName(Authentication authentication) {
-            return "";
     }
 }

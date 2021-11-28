@@ -38,6 +38,7 @@ public interface Constants {
 	public static final String STATIC_TASK_PARAM_SPECIFIC_TASK	= "4";
 	
 	public static final String STATIC_TASK_PARAM_FLAG = "flag";
+	public static final String STATIC_TASK_PARAM_USER_ID = "userId";
 	public static final String STATIC_TASK_PARAM_ID = "id";
 	
 	public static final String STATIC_READ_STATUS_IND_TASK = "task";
